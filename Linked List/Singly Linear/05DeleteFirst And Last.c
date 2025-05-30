@@ -40,7 +40,6 @@ void insertAtFirst(struct Node** head, int value) {
     printf("Inserted %d at the beginning.\n", value);
 }
 
-// Insert at end
 void insertAtLast(struct Node** head, int value) {
     struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
     newNode->data = value;
@@ -93,7 +92,6 @@ void deleteAtLast(struct Node** head) {
     temp->next = NULL;
 }
 
-// Display the list
 void displayList(struct Node* head) {
     if (head == NULL) {
         printf("List is empty.\n");
