@@ -56,7 +56,6 @@ void insertAtLast(struct Node** head, int value) {
     printf("Inserted %d at the end.\n", value);
 }
 
-// Delete from beginning
 void deleteAtFirst(struct Node** head) {
     if (*head == NULL) {
         printf("List is empty. Cannot delete from beginning.\n");
@@ -69,7 +68,6 @@ void deleteAtFirst(struct Node** head) {
     free(temp);
 }
 
-// Delete from end
 void deleteAtLast(struct Node** head) {
     if (*head == NULL) {
         printf("List is empty. Cannot delete from end.\n");
