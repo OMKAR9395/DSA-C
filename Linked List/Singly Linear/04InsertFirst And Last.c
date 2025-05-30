@@ -19,7 +19,6 @@ int main() {
     insertAtLast(&head, 30);
     insertAtLast(&head, 40);
 
-    // Displaying final list
     printf("Final Linked List:\n");
     displayList(head);
 
@@ -51,7 +50,6 @@ void insertAtLast(struct Node** head, int value) {
     printf("Inserted %d at the end.\n", value);
 }
 
-// Function to display the list
 void displayList(struct Node* head) {
     struct Node* temp = head;
     while (temp != NULL) {
