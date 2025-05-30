@@ -9,6 +9,7 @@ struct Node
 };
 void Insert_Data(struct Node**,int );
 void Display_Data(struct Node*);
+void Search_Data(struct Node* Head, int Key)
 
 int main()
 {
@@ -20,6 +21,7 @@ int main()
 
     getch();
 
+    Search_Data(Head,2);
     Display_Data(Head);
 
     return 0;
@@ -51,5 +53,27 @@ void Display_Data(struct Node* Element)
     {
         printf(" | %d |",Element->Data);
         Element = Element->Next;
+    }
+}
+void Search_Data(struct Node* Head, int Key)
+{
+    int position = 1;
+    int found = 0;
+
+    while (Head != NULL)
+    {
+        if (Head->Data == Key)
+        {
+            printf("\nElement %d found at position %d.", Key, position);
+            found = 1;
+            break;
+        }
+        Head = Head->Next;
+        position++;
+    }
+
+    if (!found)
+    {
+        printf("\nElement %d not found in the list.", Key);
     }
 }
