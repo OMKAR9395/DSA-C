@@ -31,7 +31,6 @@ int main() {
     searchElement(head, 30);   // Found
     searchElement(head, 25);   // Not found
 
-    // Delete elements
     deleteAtFirst(&head);
     deleteAtLast(&head);
 
@@ -41,7 +40,6 @@ int main() {
     return 0;
 }
 
-// Insert at beginning
 void insertAtFirst(struct Node** head, int value) {
     struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
     newNode->data = value;
@@ -50,7 +48,6 @@ void insertAtFirst(struct Node** head, int value) {
     printf("Inserted %d at the beginning.\n", value);
 }
 
-// Insert at end
 void insertAtLast(struct Node** head, int value) {
     struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
     newNode->data = value;
