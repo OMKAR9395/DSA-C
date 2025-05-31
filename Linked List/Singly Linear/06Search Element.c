@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Node structure
 struct Node {
     int data;
     struct Node* next;
 };
 
-// Function prototypes
 void insertAtFirst(struct Node** head, int value);
 void insertAtLast(struct Node** head, int value);
 void deleteAtFirst(struct Node** head);
@@ -18,7 +16,6 @@ void searchElement(struct Node* head, int key);
 int main() {
     struct Node* head = NULL;
 
-    // Insert elements
     insertAtFirst(&head, 20);
     insertAtFirst(&head, 10);
     insertAtLast(&head, 30);
