@@ -8,8 +8,10 @@ struct Node {
 
 void insertAtFirst(struct Node** head, int value);
 void insertAtLast(struct Node** head, int value);
+
 void deleteAtFirst(struct Node** head);
 void deleteAtLast(struct Node** head);
+
 void displayList(struct Node* head);
 void searchElement(struct Node* head, int key);
 
