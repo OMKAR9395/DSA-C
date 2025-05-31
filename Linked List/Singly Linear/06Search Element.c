@@ -27,9 +27,8 @@ int main() {
     printf("\nList after insertions:\n");
     displayList(head);
 
-    // Search for elements
-    searchElement(head, 30);   // Found
-    searchElement(head, 25);   // Not found
+    searchElement(head, 30);  
+    searchElement(head, 25);  
 
     deleteAtFirst(&head);
     deleteAtLast(&head);
