@@ -1,7 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-// Function definitions below (same as before)
+struct Node {
+    int data;
+    struct Node* next;
+};
 
+// Function declarations
+
+// Function definitions below (same as before)
+void insertAtFirst(struct Node** head, int value);
+void insertAtLast(struct Node** head, int value);
+void insertAtPosition(struct Node** head, int value, int position);
+void deleteAtFirst(struct Node** head);
+void deleteAtLast(struct Node** head);
+void deleteAtPosition(struct Node** head, int position);
+void displayList(struct Node* head);
+void searchElement(struct Node* head, int key);
 void insertAtFirst(struct Node** head, int value) {
     struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
     newNode->data = value;

@@ -1,39 +1,31 @@
 #include"header.h"
 
-struct Node {
-    int data;
-    struct Node* next;
-};
 
-// Function declarations
-void insertAtFirst(struct Node** head, int value);
-void insertAtLast(struct Node** head, int value);
-void insertAtPosition(struct Node** head, int value, int position);
-void deleteAtFirst(struct Node** head);
-void deleteAtLast(struct Node** head);
-void deleteAtPosition(struct Node** head, int position);
-void displayList(struct Node* head);
-void searchElement(struct Node* head, int key);
 
-int main() {
+int main()
+{
     struct Node* head = NULL;
-    int choice, value, position;
+    int choice =1, value=0, position=0;
 
-    while (1) {
-        printf("\n----- Menu -----\n");
-        printf("1. Insert at Beginning\n");
-        printf("2. Insert at End\n");
-        printf("3. Insert at Position\n");
-        printf("4. Delete at Beginning\n");
-        printf("5. Delete at End\n");
-        printf("6. Delete at Position\n");
-        printf("7. Search Element\n");
-        printf("8. Display List\n");
-        printf("9. Exit\n");
-        printf("Enter your choice: ");
+    while (choice != 0)
+        {
+        system("cls");
+        printf("\n===================================== Omkar Mohite ====================================\n");
+        printf("\n------------------------------------- Select A Choice-----------------------------------\n");
+        printf("\t\t1. Insert at Beginning\n");
+        printf("\t\t2. Insert at End\n");
+        printf("\t\t3. Insert at Position\n");
+        printf("\t\t4. Delete at Beginning\n");
+        printf("\t\t5. Delete at End\n");
+        printf("\t\t6. Delete at Position\n");
+        printf("\t\t7. Search Element\n");
+        printf("\t\t8. Display List\n");
+        printf("\t\t9. Exit\n");
+        printf("\t\tEnter your choice: ");
         scanf("%d", &choice);
 
-        switch (choice) {
+        switch (choice)
+        {
             case 1:
                 printf("Enter value: ");
                 scanf("%d", &value);
@@ -72,10 +64,13 @@ int main() {
                 break;
             case 9:
                 printf("Exiting program.\n");
-                exit(0);
+                choice = 0;
+                break;
             default:
                 printf("Invalid choice. Try again.\n");
         }
+         printf("\nPress any key to continue...");
+        getch();
     }
 
     return 0;
